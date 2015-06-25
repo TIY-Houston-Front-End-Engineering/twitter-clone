@@ -87,3 +87,35 @@ img {
 /**
  * YOUR CODE HERE
  */
+
+.container{
+    font-family: helvetica;
+    color: #4298ed;
+    font-size: 1rem;
+}
+
+ .bleep {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #444444;
+    list-style-type: none;
+
+         .avatar{
+                background-image: url("http://images.tmcnet.com/tmc/misc/articles/Image/2010/deadbird.jpg");
+                
+             }
+            .user{
+                margin-left: 2rem;
+                margin-top: 1rem;  
+                }
+
+                .bleepContent {
+                    margin-left: 2rem;
+                    margin-top: 1rem; 
+                    font-size: .75rem;
+                    color: #666666;
+                    max-width: 300px;
+
+                 }
+ }
+
