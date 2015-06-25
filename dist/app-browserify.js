@@ -1,1 +1,1 @@
-
+console.error("SyntaxError: /Users/aristonlewis/Github Projects/twitter-clone/js/app-browserify.js: Unexpected token (37:5) while parsing file: /Users/aristonlewis/Github Projects/twitter-clone/js/app-browserify.js");

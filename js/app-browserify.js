@@ -1,26 +1,42 @@
-"use strict";
+'use-strict';
+require('es5-shim');
+require('babel/register')
 
-// es5 polyfills, powered by es5-shim
-require("es5-shim")
-// es6 polyfills, powered by babel
-require("babel/register")
+import {Promise} from 'es6-promise'
+import $ from 'jquery'
+import Backbone from 'backbone'
+import React from 'react'
 
-var Promise = require('es6-promise').Promise
-// just Node?
-// var fetch = require('node-fetch')
-// Browserify?
-// require('whatwg-fetch') //--> not a typo, don't store as a var
+Parse.initialize("OWNIhkyQCSu1aS74cx0DkdSF31EN314Vz5YDyLsd", "XkdUHPnU0KAYIXnvfcOEpQAkA1zCNDvxhKuN2maZ");
 
-// other stuff that we don't really use in our own code
-// var Pace = require("../bower_components/pace/pace.js")
+var Bleep = Parse.Object.extend({
+    className: 'tweets',
+    defaults: {
+        handle: '',
+        bleeps: `you're so stupid that you forgot to write a message. Nice!`
+    }
+})
 
-// require your own libraries, too!
-// var Router = require('./app.js')
+class BleepView extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render () {
+        return (<div className='bleep'>
+                     <div className='user'></div>
+                    <div className='content'></div>
+                    <div className='bar'></div>
+                </div>)
+    }
+}
 
-// window.addEventListener('load', app)
+var BleepUser = Parse.User.extend({
+    
+    userEmail: 'email',
+     userName: ''
+     password: ''
+})
 
-// function app() {
-    // start app
-    // new Router()
-// }
+window.test = new Bleep()
 
+test.save()
