@@ -30,7 +30,7 @@ class BleepView extends React.Component {
     }
 }
 
-var BleepUser = Parse.User.extend({
+var BitterUser = Parse.User.extend({
     
     userEmail: 'email',
      userName: ''
