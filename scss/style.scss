@@ -88,6 +88,7 @@ img {
  * YOUR CODE HERE
  */
 
+<<<<<<< HEAD
 .container{
     font-family: helvetica;
     color: #4298ed;
@@ -118,4 +119,45 @@ img {
 
                  }
  }
+=======
+header{
+    height: 2.5em;
+    background-color: rgb(41, 38, 32);
+    color: white;
+    overflow: auto;
+    padding: .25em;
+    h3{
+        float:left;
+        color: white;
+        margin-left: 20px;
+    }
+    .head_logo{
+        margin-left: 10px;
+        display: block;
+        float:left;
+        width: 60px;
+
+    }
+}
+
+.wrapper{
+    border-bottom: 1px solid gray;
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    margin-top: 70px;
+    padding: 10px;
+}
+
+input{
+    width: 100%;
+    height: 2em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    &[type='submit']{
+        margin-top: 30px;
+        background-color: rgb(233, 190, 5);
+    }
+}
+>>>>>>> d06a59833a8e0295e015eca5b7c3e34c261eeaa9
 
