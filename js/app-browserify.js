@@ -18,6 +18,34 @@ var Bleep = Parse.Object.extend({
     }
 })
 
+var mostRecent = new Parse.Query(Bleep)
+mostRecent.descending("createdAt");
+mostRecent.find({
+  success: function(results) {
+    alert("Successfully retrieved " + results.length + " scores.");
+    // Do something with the returned Parse.Object values
+    for (var i = 0; i < results.length; i++) {
+      var object = results[i];
+      alert(object.id + ' - ' + object.get('playerName'));
+    }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+class Bleeplist extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (<ul>
+                // something.map()
+            </ul>)
+    }
+}
+
 class BleepView extends React.Component {
     constructor(props) {
         super(props)
@@ -73,7 +101,14 @@ class Register extends React.Component {
 } )
     }
     render() {
-        return (<div className="wrapper">
+        return (<div><header>
+        <div class="head_logo">
+            <img src="https://s-media-cache-ak0.pinimg.com/236x/d2/43/ef/d243ef43eb98da500f17caf27591328f.jpg"/>
+        </div>
+        <a href="#">
+            <h3>Log In</h3>
+        </a>
+    </header><div className="wrapper">
             <form>
                 LOG-IN
                 <input type="email" placeholder="email" ref='logEmail'></input>
@@ -86,8 +121,21 @@ class Register extends React.Component {
                 <input type="password" placeholder="password" ref='regPassword'></input>
                 <button onClick={(e) => this.register(e)} type="submit"></button>
             </form>
-        </div>)
+            SPECIAL THANKS TO PAUL SAAD AND TONI LOUSTEAU
+        </div></div>)
     }
 }
+
+var BleepRouter = Parse.Router.extend({
+    initialize: function() {
+        Parse.History.start()
+    },
+    routes: {
+        'login': 'login',
+        'home': 'home',
+        '#users/:userid' : 'profile',
+        '*anything' : 'home'
+    }
+})
 
 React.render(<Register />, document.querySelector('.container'))
