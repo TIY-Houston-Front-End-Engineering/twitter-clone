@@ -93,31 +93,79 @@ img {
     font-family: helvetica;
     color: #4298ed;
     font-size: 1rem;
+
+}
+.headerBar {
+    width: 100%;
+    background-color: #4298ED;
+    height: 3rem;
+    margin-top: 1rem;
+    position: fixed;
+    display: inline-block;
+       
+       .barIcon{
+            margin-left: 2rem;
+            color: #fff;
+            font-family: helvetica;
+            
+        svg{
+            fill: #fff;
+            width: 24px;
+            margin-top: 1rem;
+            margin-left: .5rem;
+
+        }
+    }
+
 }
 
  .bleep {
+    max-width: 400px;
+    margin-top: 5rem;
     width: 100%;
     background-color: white;
     border-bottom: 1px solid #444444;
     list-style-type: none;
+    font-family: helvetica;
+    color: #666666;
+    font-size: 1rem;
 
          .avatar{
-                background-image: url("http://images.tmcnet.com/tmc/misc/articles/Image/2010/deadbird.jpg");
-                
+                background-image: url("http://images.tmcnet.com/tmc/misc/articles/Image/2010/deadbird.jpg");  
+                height: 10%;
+                width: 10%;
              }
+
             .user{
                 margin-left: 2rem;
                 margin-top: 1rem;  
+                color: #4298ED;
                 }
 
-                .bleepContent {
-                    margin-left: 2rem;
-                    margin-top: 1rem; 
-                    font-size: .75rem;
-                    color: #666666;
-                    max-width: 300px;
+                .time{
+                    margin-left: 50%;
+                }
+                    .content {
+                        margin-left: 2rem;
+                        margin-top: 1rem; 
+                        font-size: .75rem;
+                        color: #666666;
+                        max-width: 75%;}
 
-                 }
+
+                            .bar {
+                                 display: inline-block;
+                                 margin-left: 1.5rem;
+
+
+                                svg{
+                                    margin-right: .5rem;
+                                    margin-left: .5rem;
+                                    width: 24px;
+                                    fill: #4298ED;
+                                 }
+                            }
+                    
  }
 =======
 header{
@@ -159,5 +207,5 @@ input{
         background-color: rgb(233, 190, 5);
     }
 }
->>>>>>> d06a59833a8e0295e015eca5b7c3e34c261eeaa9
+
 
