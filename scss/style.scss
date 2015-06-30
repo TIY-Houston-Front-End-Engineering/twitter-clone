@@ -266,6 +266,13 @@ input{
                     padding-left: .5rem;
 
                 }
+                    a{
+                        color: #fff;
+                         font-family: helvetica;
+                             font-size:.75rem;
+                             text-decoration: none;
+
+                    }
         }
 
 
@@ -289,15 +296,40 @@ input{
 .home{
     width: 100%;
     background-color: #4298ED;
+    height: 1200px;
 
 
         .bitterFeed{
             margin: auto;
-            height: 500px;
+            height: 100%;
             background-color: #efefef;
             width: 75%;
 
         } 
+}
+
+.profile{
+    width: 100%;
+    background-color: #4298ED;
+    height: 1200px;
+
+
+
+
+            .prof_info{
+                margin: auto;
+                height: 100%;
+                background-color: #efefef;
+                width: 50%;
+
+                          .avatar{
+                            width: 100px;
+                            height: 100px;
+                            background-color: #fff;
+        
+                            }
+            } 
+
 }
 
 
