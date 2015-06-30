@@ -103,11 +103,9 @@ class Register extends React.Component {
     render() {
         return (<div><header>
         <div class="head_logo">
-            <img src="https://s-media-cache-ak0.pinimg.com/236x/d2/43/ef/d243ef43eb98da500f17caf27591328f.jpg"/>
+            <img className="logo" src="../images/bitter_bw.svg"/>
         </div>
-        <a href="#">
-            <h3>Log In</h3>
-        </a>
+    
     </header><div className="wrapper">
             <form>
                 LOG-IN
@@ -126,16 +124,71 @@ class Register extends React.Component {
     }
 }
 
+class NavigationView extends React.Component{
+    constructor(props){
+        super(props)
+
+    }
+
+    render() {
+        return(
+          <div className="navigation"> 
+
+            <div className="navLogo">
+              <img className="logo" src="../images/bitter_bw.svg"/>
+            </div>     
+
+            <form>
+              <input type="search" placeholder="Search or something"> </input>
+            </form>
+
+            <ul>
+                <li> Home </li>
+                <li> Settings </li>
+                <li> Profile </li>
+                <li> Bleeps </li>
+            </ul>
+
+
+     </div>
+
+            )
+    }
+}
+
+
+class Home extends React.Component{
+    constructor(props){
+        super(props)
+    }
+
+
+render() {
+    return (
+        <div className="home"> 
+            <div className="bitterFeed"> 
+
+            </div>
+  </div>
+
+
+
+        )
+    }
+}
+
+
+
 var BleepRouter = Parse.Router.extend({
     initialize: function() {
         Parse.History.start()
     },
     routes: {
         'login': 'login',
-        'home': 'home',
-        '#users/:userid' : 'profile',
-        '*anything' : 'home'
+        'home': 'home', //timeline
+        '#users/:userid' : 'profile', //profile page
+        '*anything' : 'home' //anything else is home
     }
 })
 
-React.render(<Register />, document.querySelector('.container'))
+React.render(<Home />, document.querySelector('.container'))

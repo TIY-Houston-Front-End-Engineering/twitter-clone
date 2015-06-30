@@ -88,13 +88,21 @@ img {
  * YOUR CODE HERE
  */
 
-<<<<<<< HEAD
+
 .container{
     font-family: helvetica;
-    color: #4298ed;
+    color: #fff;
     font-size: 1rem;
+    background-color: #4298ED;  
 
 }
+
+
+.logo{
+    
+    margin: auto;
+}
+
 .headerBar {
     width: 100%;
     background-color: #4298ED;
@@ -184,7 +192,9 @@ header{
         display: block;
         float:left;
         width: 60px;
-
+            img{
+                max-width: 25%;
+            }
     }
 }
 
@@ -195,17 +205,101 @@ header{
     margin: auto;
     margin-top: 70px;
     padding: 10px;
+
+        .form{
+            color: #4298ED;
+
+
+        }
+            input{
+                padding-left: 1rem;
+                border: none;
+                color: #4298ED;
+
+            }
+            
+
 }
 
 input{
     width: 100%;
     height: 2em;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-bottom: 10px;
     &[type='submit']{
         margin-top: 30px;
         background-color: rgb(233, 190, 5);
     }
 }
+
+.navigation{
+    background-color: #1E466E;
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    font-family: helvetica;
+    color: #4298ED;
+    font-size:.5rem;
+    box-shadow: 0px 0px 10px #1e466e;
+                
+
+        .navLogo{
+            padding-top: 10px;
+            width: 100px;
+            fill: #fff;
+            display: inline-block;
+
+        }
+
+        ul{
+            color: #fff;
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 2rem;
+            padding: 0;
+            text-decoration: none;
+            font-size: .75rem;
+            vertical-align: text-bottom;
+                li{
+                    display: inline-block;
+                    padding-left: .5rem;
+
+                }
+        }
+
+
+     form{
+        display: inline-block;
+         vertical-align: top;
+         padding-top: 2rem;
+        
+        input[type=search]{
+            border: none;
+            max-width: 200px;
+            height:25px;    
+            padding-left: .5rem;
+
+            
+        }         
+    }      
+}
+
+
+.home{
+    width: 100%;
+    background-color: #4298ED;
+
+
+        .bitterFeed{
+            margin: auto;
+            height: 500px;
+            background-color: #efefef;
+            width: 75%;
+
+        } 
+}
+
+
 
 
